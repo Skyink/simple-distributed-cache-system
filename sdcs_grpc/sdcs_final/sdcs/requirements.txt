@@ -1,0 +1,5 @@
+Flask==3.0.0
+grpcio==1.59.0
+grpcio-tools==1.59.0
+protobuf==4.24.4
+

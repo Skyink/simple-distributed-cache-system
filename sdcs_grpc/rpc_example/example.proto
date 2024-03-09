@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package helloworld;
+
+service CacheNode {
+    // 添加kv
+    rpc UpdateKeyValue (UpdateKeyValueRequest) returns (UpdateKeyValueResponse) {}
+    // 查询kv
+    rpc SearchKeyValue (SearchKeyValueRequest) returns (SearchKeyValueResponse) {}
+}
+
+// 更新请求
+message UpdateKeyValueRequest {
+    map<string, string> kv_map = 1; // 键值对集合，key-string，value-jsonString
+}
+
+// 更新响应
+message UpdateKeyValueResponse {
+    uint32 cnt = 1;                 // 返回更新个数
+}
+
+message SearchKeyValueRequest {
+    string key = 1;
+}
+
+message SearchKeyValueResponse {
+    string value = 1;               // jsonString
+}
+

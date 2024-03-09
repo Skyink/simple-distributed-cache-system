@@ -1,0 +1,49 @@
+
+syntax = "proto3";
+
+package sdcs;
+
+service CacheNode {
+    // 更新kv
+    rpc UpdateKeyValue (UpdateKeyValueRequest) returns (UpdateKeyValueResponse) {}
+    // 查询kv
+    rpc SearchKeyValue (SearchKeyValueRequest) returns (SearchKeyValueResponse) {}
+    // 删除kv
+    rpc DeleteKeyValue (DeleteKeyValueRequest) returns (DeleteKeyValueResponse) {}
+}
+
+// 更新kv请求消息格式
+message UpdateKeyValueRequest {
+    // 要更新的键值对，kv_string-JSON字符串类型
+    string kv_string = 1;
+}
+
+// 更新kv响应消息格式
+message UpdateKeyValueResponse {
+    // 更新个数，cnt-整型
+    uint32 update_cnt = 1;
+}
+
+// 查询kv请求消息格式
+message SearchKeyValueRequest {
+    // 键值对的关键字，key-字符串类型
+    string key = 1;
+}
+
+// 查询kv响应消息格式
+message SearchKeyValueResponse {
+    // 查询到的键值对，kv_string-JSON字符串类型
+    string kv_string = 1;
+}
+
+// 删除kv请求消息格式
+message DeleteKeyValueRequest {
+    // 键值对的关键字，key-字符串类型
+    string key = 1;
+}
+
+// 删除kv响应消息格式
+message DeleteKeyValueResponse {
+    // 删除个数，cnt-整型
+    uint32 delete_cnt = 1;
+}

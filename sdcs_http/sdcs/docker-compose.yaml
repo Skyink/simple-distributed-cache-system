@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  node1:
+    build:      
+      context: ./dir      
+      dockerfile: Dockerfile
+    ports: 
+      - "9527:5000"
+    tty: true
+
+  node2:
+    build:      
+      context: ./dir      
+      dockerfile: Dockerfile
+    ports: 
+      - "9528:5000"
+    tty: true
+
+  node3:
+    build:      
+      context: ./dir      
+      dockerfile: Dockerfile
+    ports: 
+      - "9529:5000"
+    tty: true

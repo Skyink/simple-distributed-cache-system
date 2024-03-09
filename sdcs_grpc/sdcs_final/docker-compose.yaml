@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  node0:
+#    image: "cache_node"
+    build:
+      context: ./sdcs
+      dockerfile: Dockerfile
+    ports:
+      - "9527:5000"
+    tty: true
+
+  node1:
+#    image: "cache_node"
+    build:
+      context: ./sdcs
+      dockerfile: Dockerfile
+    ports:
+      - "9528:5000"
+    tty: true
+
+  node2:
+#    image: "cache_node"
+    build:
+      context: ./sdcs
+      dockerfile: Dockerfile
+    ports:
+      - "9529:5000"
+    tty: true
