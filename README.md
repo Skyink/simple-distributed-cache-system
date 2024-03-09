@@ -2,6 +2,8 @@
 
 UESTC 分布式系统课程项目
 
+2023.12
+
 ### 项目说明
 
 1. 系统功能要求详见`SDCS_ Simple Distributed Cache System.pdf`。
@@ -9,6 +11,8 @@ UESTC 分布式系统课程项目
 3. `sdcs_grpc`目录中为基于GRPC服务的简易分布式缓存系统。该系统通过了终期测试脚本的验证，最终提交作业使用此方案的工程代码。详细说明见该工程目录下的`README.md`文件。
 
 - [老师的提供的测试脚本代码](https://github.com/ruini-classes/sdcs-testsuit)
+
+
 
 
 
